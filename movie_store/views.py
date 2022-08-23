@@ -18,8 +18,8 @@ class Start(TemplateView):
 
     def generate_token(self, url):
         body = {
-            "username":"crmuat",
-            "password":"Mrc9876*"
+            "username":"",
+            "password":""
         }
         response = requests.post(url, json=body)
         return response.json()
@@ -32,7 +32,7 @@ class Start(TemplateView):
         body = {
             "header": {
                 "sysid":"CST",
-                "requestID":"GEFwWVrskLSpmvcY"
+                "requestID":""
             },
             "name": "Pandoraedo",
             "subscription": "12 Years Family",
@@ -53,8 +53,8 @@ class SubscriptionListView(TemplateView):
 
     def generate_token(self, url):
         body = {
-            "username":"crmuat",
-            "password":"Mrc9876*"
+            "username":"",
+            "password":""
         }
         response = requests.post(url, json=body)
         return response.json()
@@ -67,7 +67,7 @@ class SubscriptionListView(TemplateView):
         body = {
             "header": {
                 "sysid":"CST",
-                "requestID":"GEFwWVrskLSpmvcY"
+                "requestID":""
             },
             "subscription": "3 months"
         }
