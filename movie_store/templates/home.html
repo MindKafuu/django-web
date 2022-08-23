@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Nintendo Switch Reantal Shop{% endblock %}
+
+{% block content %}
+
+
+<!-- <div class="card" style="width: 18rem;">
+    <img class="img-fluid" width="150" height="150" src="{{ game.image.url }}" alt="image">
+    <div class="card-body">
+        <p class="card-text">{{ game.title }}</p>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-auto" style="padding-top: 5%; ">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    <img width="25%" height="me-auto" style="padding-top: 5%;" src="{% static '\images\user.png' %}" class="img-fluid rounded">
+                    <p class="fs-4" style="padding-top: 5%; margin-bottom: 0">{{ response.name }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Subscription: {{ response.subscription }}</li>
+                    <li class="list-group-item">Credit: {{ response.credit }}</li>
+                    <li class="list-group-item">Country: {{ response.country }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-6" style="margin-left: 8%; margin-right: 9%">
+            <img width="me-2" height="me-auto" src="{% static '\images\sup_party.png' %}" class="img-fluid rounded">
+        </div>
+        <div class="col-auto" style="padding-top: 5%;">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Featured
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

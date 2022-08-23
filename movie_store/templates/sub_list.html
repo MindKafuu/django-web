@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Test{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for user in users.data %}
+        
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                    <img width="25%" height="me-auto" style="padding-top: 5%;" src="{% static '\images\user.png' %}"
+                        class="img-fluid rounded">
+                    <p class="fs-4" style="padding-top: 5%; margin-bottom: 0">{{ user.name }}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Subscription: {{ user.subscription }}</li>
+                    <li class="list-group-item">Credit: {{ user.credit }}</li>
+                    <li class="list-group-item">Country: {{ user.country }}</li>
+                </ul>
+            </div>
+        </div>
+
+            {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
